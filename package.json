@@ -1,34 +1,27 @@
 {
-  "name": "webpack-demo",
+  "name": "webpack",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server --open",
-    "server": "node server.js",
-    "build": "webpack"
+    "build": "webpack",
+    "main": "dist/webpack-numbers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloMengfei123/webpack.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.1.0",
-    "csv-loader": "^3.0.2",
-    "express": "^4.17.1",
-    "file-loader": "^4.1.0",
-    "html-webpack-plugin": "^3.2.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.37.0",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-middleware": "^3.7.0",
-    "webpack-dev-server": "^3.7.2",
-    "webpack-merge": "^4.2.1",
-    "xml-loader": "^1.2.1"
+  "bugs": {
+    "url": "https://github.com/helloMengfei123/webpack/issues"
   },
-  "dependencies": {
-    "lodash": "^4.17.15"
+  "homepage": "https://github.com/helloMengfei123/webpack#readme",
+  "devDependencies": {
+    "lodash": "^4.17.15",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
   }
 }

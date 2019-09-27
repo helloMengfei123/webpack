@@ -1,32 +1,19 @@
-const path = require('path');
-const webpack = require('webpack');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
 
 module.exports = {
-  entry: {
-    index: './src/index.js',
-    // another: './src/another-module.js'
-  },
-  plugins: [
-    new HTMLWebpackPlugin({
-      title: 'Code Splitting'
-    }),
-
-  ],
-  //   optimization: {
-  //     splitChunks: {
-  //         cacheGroups: {
-  //             commons: {
-  //                 name: "commons",
-  //                 chunks: "initial",
-  //                 minChunks: 2
-  //             }
-  //         }
-  //     }
-  // },
+  entry: './src/index.js',
   output: {
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'webpack-numbers.js',
+    library: 'webpackNumbers',
+    libraryTarget: 'umd'
+  },
+  externals: {
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_'
+    }
   }
 };
